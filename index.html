@@ -284,10 +284,12 @@
                     <option value="BTC">BTC</option>
                     <option value="ETH">ETH</option>
                     <option value="LTC">LTC</option>
+                    <option value="USDT">USDT</option>
+                    <option value="USDC">USDC</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="amount-usd">Montant en USD</label>
+                <label for="amount-usd">Montant en $</label>
                 <input type="text" id="amount-usd" placeholder="Ex: 4386.50" required>
             </div>
             <div class="form-group">
@@ -312,6 +314,7 @@
                     <option value="BTC">BTC</option>
                     <option value="ETH">ETH</option>
                     <option value="LTC">LTC</option>
+                    <option value="TRX">TRX</option>
                 </select>
             </div>
             <button onclick="generateTransaction()">Générer</button>
@@ -406,7 +409,7 @@
 
             // Remplir les champs de la page de détails
             document.getElementById('display-amount-crypto').textContent = `−${amount} ${crypto}`;
-            document.getElementById('display-amount-usd').textContent = `−${amountUsd} USD`;
+            document.getElementById('display-amount-usd').textContent = `−${amountUsd} $`;
             document.getElementById('display-address-link').textContent = address;
             document.getElementById('display-address-link').href = `#${address}`;
             document.getElementById('display-hash-link').textContent = hashId;
