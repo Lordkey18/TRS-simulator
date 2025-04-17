@@ -149,7 +149,7 @@
             margin: 0;
         }
 
-        .amount-usd {
+        .amount-fiat {
             font-size: 14px;
             color: #666;
             margin: 5px 0 0 0;
@@ -289,8 +289,15 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="amount-usd">Montant en $</label>
-                <input type="text" id="amount-usd" placeholder="Ex: 4386.50" required>
+                <label for="fiat-currency">Devise</label>
+                <select id="fiat-currency" required>
+                    <option value="$">$</option>
+                    <option value="€">€</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="amount-fiat">Montant fiat</label>
+                <input type="text" id="amount-fiat" placeholder="Ex: 4386.50" required>
             </div>
             <div class="form-group">
                 <label for="address">Adresse d'envoi</label>
@@ -338,7 +345,7 @@
                     <span class="bitcoin-symbol">₿</span>
                 </div>
                 <h2 id="display-amount-crypto" class="amount-crypto"></h2>
-                <p id="display-amount-usd" class="amount-usd"></p>
+                <p id="display-amount-fiat" class="amount-fiat"></p>
             </div>
 
             <div class="section sent-to-section">
@@ -400,7 +407,8 @@
             // Récupérer les valeurs du formulaire
             const amount = document.getElementById('amount').value;
             const crypto = document.getElementById('crypto').value;
-            const amountUsd = document.getElementById('amount-usd').value;
+            const fiatCurrency = document.getElementById('fiat-currency').value;
+            const amountFiat = document.getElementById('amount-fiat').value;
             const address = document.getElementById('address').value;
             const hashId = document.getElementById('hash-id').value;
             const dateTime = document.getElementById('date-time').value;
@@ -409,7 +417,7 @@
 
             // Remplir les champs de la page de détails
             document.getElementById('display-amount-crypto').textContent = `−${amount} ${crypto}`;
-            document.getElementById('display-amount-usd').textContent = `−${amountUsd} $`;
+            document.getElementById('display-amount-fiat').textContent = `−${amountFiat} ${fiatCurrency}`;
             document.getElementById('display-address-link').textContent = address;
             document.getElementById('display-address-link').href = `#${address}`;
             document.getElementById('display-hash-link').textContent = hashId;
