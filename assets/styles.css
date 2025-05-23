@@ -1,0 +1,258 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 414px; /* Largeur typique d'un écran mobile */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.nav-bar {
+    background-color: #fff;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Styles pour la page de détails */
+#transaction-details-page {
+    display: none;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.header h1 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.header .close-btn {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.transaction-details {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.icon-container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #e6f0fa;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.icon-container .icon {
+    font-size: 20px;
+    color: #f5a623;
+}
+
+.icon-container .bitcoin-symbol {
+    font-size: 12px;
+    color: #fff;
+    position: absolute;
+    background-color: #f5a623;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    text-align: center;
+    margin-left: 20px;
+    margin-top: -10px;
+}
+
+.amount-crypto {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.amount-fiat {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0 0 0;
+}
+
+.section {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0; /* Barres grises entre les sections */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.section:last-child {
+    border-bottom: none; /* Pas de barre après la dernière section */
+}
+
+.section label {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 5px;
+    flex: 1;
+}
+
+.section.sent-to-section {
+    display: block; /* Revenir à un affichage en bloc pour "Sent to" */
+    text-align: center; /* Centrer uniquement la section "Sent to" */
+}
+
+.section.sent-to-section .content {
+    text-align: center; /* Centrer le contenu de "Sent to" */
+}
+
+.section .content {
+    flex: 2;
+}
+
+.section .content p {
+    font-size: 14px;
+    color: #333;
+    margin: 0;
+    word-break: break-all; /* S'assurer que le texte ne dépasse pas */
+}
+
+.section .content .sent-to {
+    display: block;
+}
+
+.section .content .sent-to a {
+    display: block;
+    margin-bottom: 5px;
+    word-break: break-all; /* S'assurer que les liens ne dépassent pas */
+}
+
+.section .content-right {
+    flex: 2;
+    text-align: right; /* Alignement à droite pour les autres sections */
+}
+
+.section .content-right p {
+    font-size: 14px;
+    color: #333;
+    margin: 0;
+    word-break: break-all;
+}
+
+.section .status {
+    display: inline-block;
+    background-color: #e6f7e9;
+    color: #28a745;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+}
+
+.section .address-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 10px;
+    max-width: 100%; /* S'assurer que la boîte ne dépasse pas */
+}
+
+.section .content-right .address-box {
+    display: inline-flex; /* Ajuster pour un affichage en ligne */
+    max-width: 80%; /* Limiter la largeur pour éviter le débordement */
+}
+
+.section .address-box p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+    word-break: break-all; /* S'assurer que le texte ne dépasse pas */
+}
+
+.section .address-box .copy-icon {
+    font-size: 16px;
+    color: #666;
+    cursor: pointer;
+    margin-left: 10px; /* Espacement entre le texte et l'icône */
+}
+
+.section a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+.section a:hover {
+    text-decoration: underline;
+}
