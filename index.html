@@ -42,101 +42,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transaction Generator - Accueil</title>
+    <title>Transaction Generator</title>
     <link rel="stylesheet" href="assets/styles.css">
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+            background-color: #f5f5f5;
         }
 
         .app-container {
-            width: 100%;
-            max-width: 414px;
-            background-color: #fff;
-            border: 1px solid #ddd;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .container {
-            background-color: #fff;
+            max-width: 1200px; /* Augmenté pour accommoder les images côte à côte */
+            margin: 0 auto;
             padding: 20px;
-            text-align: center;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            min-height: 100vh;
         }
 
         h1 {
-            font-size: 24px;
-            margin-bottom: 20px;
+            text-align: center;
+            color: #333;
         }
 
-        .model-buttons {
+        .model-section {
             display: flex;
             justify-content: space-between;
-            gap: 10px;
+            gap: 20px; /* Espacement entre les sections */
+            margin-bottom: 30px;
+            flex-wrap: wrap; /* Permet de passer à la ligne si l'écran est trop petit */
         }
 
-        .model-preview {
+        .model-section div {
             flex: 1;
+            min-width: 200px; /* Taille minimale pour chaque section */
             text-align: center;
         }
 
-        .model-preview img {
-            width: 170px;
+        .model-section h2 {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .model-section img {
+            width: 200px; /* Taille fixe réduite pour les images */
             height: auto;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-            margin-bottom: 5px;
+            border-radius: 8px;
+            margin-bottom: 10px;
         }
 
-        .model-preview h2 {
-            font-size: 16px;
-            margin: 5px 0;
-        }
-
-        .model-button {
-            display: block;
-            width: 100%;
-            padding: 8px;
-            background-color: #007bff;
+        .model-section a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #1a73e8;
             color: #fff;
             text-decoration: none;
             border-radius: 5px;
-            font-size: 14px;
             text-align: center;
         }
 
-        .model-button:hover {
-            background-color: #0056b3;
+        .model-section a:hover {
+            background-color: #1557b0;
         }
     </style>
 </head>
 <body>
     <div class="app-container">
-        <div class="container">
-            <h1>Choisir un modèle</h1>
-            <div class="model-buttons">
-                <div class="model-preview">
-                    <h2>Modèle 1</h2>
-                    <a href="model1.html" class="model-button">
-                        <img src="assets/model1-preview.jpg" alt="Aperçu du Modèle 1">
-                        <span>Sélectionner</span>
-                    </a>
-                </div>
-                <div class="model-preview">
-                    <h2>Modèle 2</h2>
-                    <a href="model2.html" class="model-button">
-                        <img src="assets/model2-preview.jpg" alt="Aperçu du Modèle 2">
-                        <span>Sélectionner</span>
-                    </a>
-                </div>
+        <h1>Transaction Generator</h1>
+        <div class="model-section">
+            <div>
+                <h2>Modèle 1</h2>
+                <img src="assets/model1-preview.jpg" alt="Modèle 1 Preview">
+                <a href="model1.html">Créer une transaction (Modèle 1)</a>
+            </div>
+            <div>
+                <h2>Modèle 2</h2>
+                <img src="assets/model2-preview.jpg" alt="Modèle 2 Preview">
+                <a href="model2.html">Créer une transaction (Modèle 2)</a>
+            </div>
+            <div>
+                <h2>Modèle 3</h2>
+                <img src="assets/model3-preview.jpg" alt="Modèle 3 Preview">
+                <a href="model3.html">Créer une transaction (Modèle 3)</a>
             </div>
         </div>
     </div>
